@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:konversi_mata_uang/currencyConvert.dart';
 import 'package:konversi_mata_uang/login.dart';
+import 'package:konversi_mata_uang/timeZoneConverter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +27,8 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: Login(),
+      home: TimeZoneConverterPage(),
+      debugShowCheckedModeBanner: false,
     );
   }
 }

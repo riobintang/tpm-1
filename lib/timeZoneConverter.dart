@@ -12,23 +12,27 @@ void _changeDate() {
   } else if (dropdownvalue == 'WIT') {
     dateNow = DateFormat('EEEE, d MMM, yyyy HH:mm:ss')
         .format(DateTime.now().toUtc().add(const Duration(hours: 9)));
-  } else {
+  } else if (dropdownvalue == "WIB") {
     dateNow = DateFormat('EEEE, d MMM, yyyy HH:mm:ss')
         .format(DateTime.now().toUtc().add(const Duration(hours: 7)));
+  } else {
+    dateNow = DateFormat('EEEE, d MMM, yyyy HH:mm:ss')
+        .format(DateTime.now().toUtc().add(const Duration(hours: 1)));
   }
 }
 
-class CalendarPage extends StatefulWidget {
+class TimeZoneConverterPage extends StatefulWidget {
   @override
-  State<CalendarPage> createState() => _CalendarPageState();
+  State<TimeZoneConverterPage> createState() => _TimeZoneConverterState();
 }
 
-class _CalendarPageState extends State<CalendarPage> {
+class _TimeZoneConverterState extends State<TimeZoneConverterPage> {
   // List of items in our dropdown menu
   var items = [
     'WIB',
     'WITA',
     'WIT',
+    'London',
   ];
 
   @override
